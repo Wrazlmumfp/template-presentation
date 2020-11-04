@@ -1,0 +1,123 @@
+
+
+%\usepackage[german]{babel}             % Language german; replace ngerman by english when required
+\usepackage[T1]{fontenc}                % For better wort separation
+\usepackage[utf8]{inputenc}             % For äöüß etc.
+\usepackage{amsthm}                     % For theorems, definitions, propositions etc.
+\usepackage{amsmath}                    % Makes everything better
+\usepackage{mathtools}
+\usepackage{comment}                    % For commenting out blocks of text
+\usepackage{tikz}                       % Tikz ist kein Zeichenprogramm
+\usepackage{stmaryrd}			% For \longarrownot\longrightarrow
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{centernot}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+
+%%%%%%%%%%%%%%%%%%%  theorem environment %%%%%%%%%%%%%%%%%%%
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{example}[definition]{Example}
+
+%\theoremstyle{plain}
+%\newtheorem{corollary}[definition]{Corollary}
+%\newtheorem{theorem}[definition]{Theorem}
+%\newtheorem{lemma}[definition]{Lemma}
+
+%\theoremstyle{remark}
+%\newtheorem{remark}[definition]{Remark}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{proposition}[thm]{Proposition}
+%\newtheorem{remark}[thm]{Remark}
+
+%\newtheorem{lemma}[thm]{Lemma}
+%\newtheorem{corollary}[thm]{Corollary}
+
+\setbeamertemplate{theorem}[ams style]
+\setbeamertemplate{theorems}[numbered]
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremstyle{example}
+\newtheorem*{example*}{Example}
+
+
+%%%%%%%%%%%%%%%%%%%   operatornames %%%%%%%%%%%%%%%%%%%%%%%%
+% Some shortcuts
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Integ}{\mathbb{Z}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Comp}{\mathbb{C}}
+\newcommand{\terms}{\mathbb{T}}
+\newcommand{\im}{\operatorname{Im}}     	
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Hom}{\operatorname{Hom}}   	
+\newcommand{\ri}{\operatorname{ri}}
+\newcommand{\Supp}{\operatorname{Supp}} 	
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\HF}{\operatorname{HF}}     	
+\newcommand{\HP}{\operatorname{HP}}
+\newcommand{\HS}{\operatorname{HS}}    	
+\newcommand{\HN}{\operatorname{HN}}
+\newcommand{\hn}{\operatorname{hn}}     	
+\newcommand{\mult}{\operatorname{mult}}
+\newcommand{\LT}{\operatorname{LT}}     	
+\newcommand{\LM}{\operatorname{LM}}	
+\newcommand{\IG}{\mathcal{I}_G}
+\newcommand{\MS}{\operatorname{MS}}     	
+\newcommand{\LC}{\operatorname{LC}}
+\newcommand{\GL}{\operatorname{GL}}     	
+\newcommand{\NR}{\operatorname{NR}}
+\newcommand{\id}{\operatorname{id}}		
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\ord}{\operatorname{ord}}	
+\newcommand{\rey}{\varrho}
+\newcommand{\calA}{{\mathcal{A}}}
+\newcommand{\isom}{\cong}
+\newcommand{\calB}{{\mathcal{B}}}
+\newcommand{\calC}{{\mathcal{C}}}
+\newcommand{\calI}{{\mathcal{I}}}
+\newcommand{\Rel}{{\operatorname{Rel}}}
+\newcommand{\Mat}{{\operatorname{Mat}}}
+\newcommand{\tr}{^{\operatorname{tr}}} % transposed matrix
+\newcommand{\trace}{{\operatorname{trace}}}
+\renewcommand{\det}{{\operatorname{det}}}
+\newcommand{\characteristic}{{\operatorname{char}}}
+\newcommand{\lcm}{{\operatorname{lcm}}}
+%\newcommand{\rewrite}[1]{{\,\stackrel{#1}{\longrightarrow}_{\rm s}\,}}
+%\newcommand{\nrewrite}[1]{{\,\stackrel{#1}{\longarrownot\longrightarrow}_{\rm s}\,}}
+%\newcommand{\rewriteequiv}[1]{{\,\stackrel{#1}{\longleftrightarrow}_{\rm s}\,}}
+%\newcommand{\reductionstep}[1]{{\,\stackrel{#1}{\longrightarrow}_{\rm ss}\,}}
+\newcommand{\rewrite}[1]{{{\xrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm s}}}
+\newcommand{\nrewrite}[1]{{{\longarrownot\xrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm s}}}
+\newcommand{\rewriteequiv}[1]{{{\xleftrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm s}}}
+\newcommand{\reductionstep}[1]{{{\xrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm ss}}}
+
+
+% Inserts an empty page
+\newcommand{\emptypage}{\newpage\null\thispagestyle{empty}\newpage}
+
+% For restricting a function to a certain subset - f|_A
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+		\left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+		#1 % the function
+		\vphantom{\big|} % pretend it's a little taller at normal size
+		\right|_{#2} % this is the delimiter
+}}
+
+
+\newcommand{\projection}[3]{$ #1*(x1) + #2*(x2) + #3*(x3) $}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
