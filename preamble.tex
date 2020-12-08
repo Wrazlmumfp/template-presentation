@@ -3,6 +3,7 @@
 %\usepackage[german]{babel}             % Language german; replace ngerman by english when required
 \usepackage[T1]{fontenc}                % For better wort separation
 \usepackage[utf8]{inputenc}             % For äöüß etc.
+\usepackage{lmodern}                    % Better font resolution
 \usepackage{amsthm}                     % For theorems, definitions, propositions etc.
 \usepackage{amsmath}                    % Makes everything better
 \usepackage{mathtools}
@@ -93,10 +94,6 @@
 \renewcommand{\det}{{\operatorname{det}}}
 \newcommand{\characteristic}{{\operatorname{char}}}
 \newcommand{\lcm}{{\operatorname{lcm}}}
-%\newcommand{\rewrite}[1]{{\,\stackrel{#1}{\longrightarrow}_{\rm s}\,}}
-%\newcommand{\nrewrite}[1]{{\,\stackrel{#1}{\longarrownot\longrightarrow}_{\rm s}\,}}
-%\newcommand{\rewriteequiv}[1]{{\,\stackrel{#1}{\longleftrightarrow}_{\rm s}\,}}
-%\newcommand{\reductionstep}[1]{{\,\stackrel{#1}{\longrightarrow}_{\rm ss}\,}}
 \newcommand{\rewrite}[1]{{{\xrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm s}}}
 \newcommand{\nrewrite}[1]{{{\longarrownot\xrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm s}}}
 \newcommand{\rewriteequiv}[1]{{{\xleftrightarrow{\mathmakebox[0.5cm]{#1}}}_{\rm s}}}
@@ -114,8 +111,12 @@
 		\right|_{#2} % this is the delimiter
 }}
 
+% small matrices
+\newcommand{\mat}[1]{\begin{psmallmatrix}#1\end{psmallmatrix}}
 
-\newcommand{\projection}[3]{$ #1*(x1) + #2*(x2) + #3*(x3) $}
+% font size
+\newcommand{\size}[1]{\fontsize{#1}{0}\selectfont{}}
+
 
 %%% Local Variables:
 %%% mode: latex
